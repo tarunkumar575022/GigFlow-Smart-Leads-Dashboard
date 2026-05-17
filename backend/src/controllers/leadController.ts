@@ -138,7 +138,7 @@ export const exportLeads = asyncHandler(async (req: AuthRequest, res: Response) 
     csvRows.push(row.join(','));
   });
 
-  const csvString = csvRows.join('\\n');
+  const csvString = csvRows.join('\n');
 
   res.setHeader('Content-Type', 'text/csv');
   res.setHeader('Content-Disposition', 'attachment; filename=leads.csv');
