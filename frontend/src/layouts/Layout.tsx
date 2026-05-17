@@ -1,4 +1,4 @@
-import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
+import { Outlet, Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import { useThemeStore } from '../store/themeStore';
 import { LayoutDashboard, Users, LogOut, Menu, Sun, Moon } from 'lucide-react';
@@ -6,7 +6,7 @@ import { LayoutDashboard, Users, LogOut, Menu, Sun, Moon } from 'lucide-react';
 export const Layout = () => {
   const { user, logout } = useAuthStore();
   const navigate = useNavigate();
-  const location = useLocation();
+
 
   const { isDarkMode, toggleTheme } = useThemeStore();
 
